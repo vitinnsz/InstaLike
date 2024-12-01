@@ -20,9 +20,10 @@ export async function postarNovoPost(req, res) {
 }
 
 export async function uploadImagem(req, res) {
+  const urlImagem = `http://localhost:3000/${id}.png`
   const novoPost = {
     descricao: '',
-    imgUrl: req.file.originalname,
+    imgUrl: urlImagem,
     alt: '',
   }
 
